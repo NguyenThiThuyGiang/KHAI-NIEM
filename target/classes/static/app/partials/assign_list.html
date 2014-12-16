@@ -1,0 +1,32 @@
+<div class="container-fluid">
+
+    <div class="col-md-6 col-sm-12"  ng-repeat="item in assigns">
+        <div class="userWidget-1">
+            <div class="avatar ">
+
+                <div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="{{item.score}}" aria-valuemin="0" aria-valuemax="100" style="width: {{item.score === -1 ? 0 :item.score}}%" data-toggle="tooltip" title="" data-original-title="{{item.score === -1 ? 0 :item.score}}%"> <h1 class="number text-green osLight">{{item.score}} / 100</h1>
+                </div>
+                <img tooltip="[ {{item.teacher_email}} ] {{item.teacher_name}} " tooltip-trigger="mouseenter" tooltip-placement="top" class="avatar pull-left" ng-src="data/account/avatar/{{item.teacher_id}}" alt="avatar">
+                <div class="ops">
+                    <a href="#" class="btn btn-icon btn-round btn-o btn-white btn-sm"><span class="fa fa-envelope-o"></span></a>
+                    <a href="#" class="btn btn-icon btn-round btn-o btn-white btn-sm"><span class="fa fa-heart-o"></span></a>
+                </div>
+                <div class="name osLight">{{item.author_name}}</div>
+            </div>
+            <div class="title">{{item.topic}}</div>
+            <div class="address">{{item.info}}</div>
+            <div class="rating">
+                <div class="number text-green osLight">{{item.deadline | date : "dd/mm/yyyy"}}</div>
+
+                <div class="clearfix"></div>
+            </div>
+            <ul class="stats">
+                <li><span>{{item.users}}</span>Đã nộp</li>
+                <li><span>345</span>Số người nhận</li>
+                <li><span>{{item.count}}</span>Số khái niệm</li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</div>
